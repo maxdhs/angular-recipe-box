@@ -1,0 +1,8 @@
+<ol (click)="clickFunc()">
+  <li>
+      {{recipe.name}}
+  </li>
+  <li *ngIf="showInstructions">
+      {{recipe.instructions}}
+  </li>
+</ol>
