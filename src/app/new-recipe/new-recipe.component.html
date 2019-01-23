@@ -1,0 +1,6 @@
+
+    <label for="">enter new recipe</label>
+    <br>
+      <input type="text" placeholder="enter name" #newName>
+      <input type="text" placeholder="enter instructions" #newInstructions>
+      <button (click)="submitForm(newName.value, newInstructions.value)">submit</button>

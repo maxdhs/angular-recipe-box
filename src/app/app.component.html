@@ -3,18 +3,13 @@
     Welcome to the recipe box!
   </h1>
 
-  <!-- <form>
-    <label for="">enter new recipe</label>
-    <br>
-      <input type="text" placeholder="enter name" #newName>
-      <input type="text" placeholder="enter instructions" #newInstructions>
-      <button (click)="submitForm(newName.value, newInstructions.value)">submit</button>
-  </form> -->
-  
+  <app-new-recipe (newRecipeEmitter)="addRecipeToList($event)"></app-new-recipe>
 
-  <div *ngFor="let thisRecipe of recipes">
+
+  <div *ngFor="let thisRecipe of recipesList">
     <app-recipe [recipe]="thisRecipe"></app-recipe>
   </div>
 
-  
+
+ 
 

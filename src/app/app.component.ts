@@ -7,16 +7,12 @@ import { Recipe } from './models/recipe.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'recipe';
-  recipes: Recipe[] = [
-    new Recipe('cake', 'chocolate puddng'),
-    new Recipe('soda', 'coke diet coke'),
-    new Recipe('nachos', 'cheese and beef')
+  recipesList: Recipe[] = [
   ];
 
-  // submitForm(name, description) {
-  //   console.log(name, description);
-  // }
+  addRecipeToList(newRecipe: Recipe) {
+    this.recipesList.push(newRecipe);
+  }
 }
 
 
